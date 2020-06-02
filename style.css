@@ -7,3 +7,18 @@ html {
 *:after {
   box-sizing: inherit;
 }
+
+body {
+  background: #2c2141;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 16px;
+}
+
+.main {
+  background: #f8f8f8;
+  border-radius: 16px;
+  width: 624px;
+}
