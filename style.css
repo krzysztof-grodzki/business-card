@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
 html {
   box-sizing: border-box;
 }
@@ -9,20 +11,26 @@ html {
 }
 
 body {
-  background: #2c2141;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  margin: 16px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
+  background-image: url("smoked-glass.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .main {
-  background: #f8f8f8;
   border-radius: 16px;
   width: 624px;
   padding: 32px;
+  margin: 16px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
 .person {
@@ -35,41 +43,64 @@ body {
   height: 148px;
   margin-right: 32px;
   flex-shrink: 0;
+  display: block;
+}
+
+.person__picture--activ {
+  -webkit-animation: rotate-in-ver 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.4s both;
+  animation: rotate-in-ver 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.4s both;
 }
 
 .person__info {
   margin-bottom: 24px;
 }
 
-.person__description--with-margin {
-  margin-bottom: 22px;
-}
-
 .person__link {
-  color: #e20613;
+  color: #650d1b;
   text-decoration: none;
+  padding-right: 16px;
 }
 
 .person__name {
   font-size: 36px;
-  font-weight: normal;
+  font-weight: semi-bold;
+  margin: 0;
+  margin-bottom: 3px;
+}
+
+.person__position {
+  font-size: 16px;
+  font-weight: 600;
+  color: #512f23;
   margin: 0;
 }
 
+.special {
+  color: #c73e1d;
+  font-weight: normal;
+}
+
 .person__description {
-  font-size: 16px;
+  font-style: 16px;
   line-height: 22px;
   margin: 0;
 }
 
-.person__position {
-  font-size: 18px;
-  color: #545454;
-  margin: 0;
-  font-style: italic;
+.person__description--with-margin {
+  margin-bottom: 22px;
 }
 
-.special {
-  color: #ed6d05;
-  font-weight: normal;
+.span {
+  color: #650d1b;
+}
+
+@keyframes rotate-in-ver {
+  0% {
+    transform: rotateY(-360deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
 }
